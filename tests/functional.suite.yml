@@ -16,6 +16,7 @@ modules:
     config:
         Yii2:
             configFile: 'config/test.php'
+            part: [orm, fixtures]
         Db:
             dsn: 'mysql:host=localhost;dbname=api_test'
             user: 'root'
@@ -24,7 +25,7 @@ modules:
             populate: true
             cleanup: false
         PhpBrowser:
-            url: 'http://api.dev'
+            url: 'http://0.0.0.0:8000'
         REST:
             depends: PhpBrowser
-            url: 'http://api.dev'
+            url: 'http://0.0.0.0:8000'

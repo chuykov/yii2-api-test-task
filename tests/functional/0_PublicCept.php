@@ -2,6 +2,8 @@
 use Codeception\Util\HttpCode;
 
 $I = new FunctionalTester($scenario);
+$I->haveFixtures(['\yii\test\InitDbFixture']);
+
 $I->wantTo('test the public page');
 $I->sendGET('/info');
 $I->seeResponseIsJson();

@@ -76,7 +76,7 @@ $config = [
                 ],
             ],
         ],
-        'db' => require(__DIR__ . '/../../config/db.php')
+        'db' => (YII_ENV=='dev')?require(__DIR__ . '/../../config/test_db.php'):require(__DIR__ . '/../../config/db.php')
     ],
     'params' => $params,
 ];

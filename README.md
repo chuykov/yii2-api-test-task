@@ -1,6 +1,21 @@
 Yii 2 Api Test Project
 ============================
 
+Start test server:
+-------------------
+    php yii migrate
+    php yii serve 0.0.0.0:8000 --docroot=api     
+
+Functional testing:
+-------------------
+    php tests/bin/yii serve 0.0.0.0:8000 --docroot=api --appconfig=config/test_console.php     
+    composer exec codecept run
+    
+Required databases:
+-------------------
+    api
+    api_test
+
 Sample apache config:
 -------------------
     <VirtualHost *:80>
@@ -8,9 +23,5 @@ Sample apache config:
         ServerName api.dev
     </VirtualHost>
 
-Required databases:
--------------------
-    api
-    api_test
+Postman collection - [api.postman_collection.json](https://raw.githubusercontent.com/chuykov/yii2-api-test-task/master/api.postman_collection.json)
 
-Postman collection - [api.postman_collection.json](https://raw.githubusercontent.com/chuykov/yii2-api-test-task/master/api.postman_collection.json) 

@@ -21,6 +21,7 @@ class AuthorController extends ActiveController
     }
 
     public function actionIndex() {
+        sleep(3);
         return Author::getRandom()->one();
     }
 

@@ -21,6 +21,7 @@ class QuoteController extends ActiveController
     }
 
     public function actionIndex() {
+        sleep(3);
         return Quote::getRandom()->one();
     }
 
