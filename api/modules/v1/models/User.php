@@ -120,11 +120,11 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
      */
     public function getToken()
     {
-        //return $this->hasOne(Token::className(), ['id' => 'user_id']);
         return $this->hasOne(Token::className(), ['user_id' => 'id']);
     }
+
     /**
-     * @param Profile $profile
+     * @param Token $profile
      */
     public function setToken(Token $token)
     {

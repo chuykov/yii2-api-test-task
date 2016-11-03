@@ -8,8 +8,8 @@ $config = [
     'bootstrap' => ['log'],
     'modules' => [
         'v1' => [
-            'basePath' => '@app/api/modules/v1', // base path for our module class
-            'class' => 'app\api\modules\v1\Api', // Path to module class
+            'basePath' => '@app/api/modules/v1',
+            'class' => 'app\api\modules\v1\Api',
         ]
     ],
     'components' => [
@@ -28,7 +28,6 @@ $config = [
             },
         ],
         'errorAction' => 'v1/info/error',
-        // URL Configuration for our API
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -49,7 +48,6 @@ $config = [
             ],
         ],
         'request' => [
-            // Set Parser to JsonParser to accept Json in request
             'enableCookieValidation' => false,
             'enableCsrfValidation' => false,
             'parsers' => [
@@ -59,19 +57,16 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        // Set this enable authentication in our API
         'user' => [
             'identityClass' => 'app\api\modules\v1\models\User',
-            'enableAutoLogin' => false, // Don't forget to set Auto login to false
+            'enableAutoLogin' => false,
         ],
-        // Enable logging for API in a api Directory different than web directory
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
-                    // maintain api logs in api directory
                     'logFile' => '@api/runtime/logs/error.log'
                 ],
             ],
