@@ -25,3 +25,4 @@ Sample apache config:
 
 Postman collection - [api.postman_collection.json](https://raw.githubusercontent.com/chuykov/yii2-api-test-task/master/api.postman_collection.json)
 
+![alt tag](db.png?raw=true "db")
