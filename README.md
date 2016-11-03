@@ -4,7 +4,7 @@ Yii 2 Api Test Project
 Start test server:
 -------------------
     php yii migrate
-    php yii serve 0.0.0.0:8000 --docroot=api     
+    php yii serve 0.0.0.0:8080 --docroot=api     
 
 Functional testing:
 -------------------
