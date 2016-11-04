@@ -20,18 +20,11 @@ class InfoController extends ActiveController
         ];
     }
 
-    public function actionError()
-    {
-        $exception = Yii::$app->errorHandler->exception;
-        if ($exception !== null) {
-            return $this->render('error', ['exception' => $exception]);
-        }
-    }
-
     protected function verbs()
     {
         return [
             'index' => ['GET', 'HEAD'],
+            'error' => [],
         ];
     }
 }

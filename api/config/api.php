@@ -45,6 +45,8 @@ $config = [
                 'register' => 'v1/auth/register',
                 'author' => 'v1/author/index',
                 'quote' => 'v1/quote/index',
+                '/' => 'v1/info/error',
+                '/<url:[a-zA-Z0-9-]+>' => 'v1/info/error',
             ],
         ],
         'request' => [
